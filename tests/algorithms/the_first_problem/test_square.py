@@ -6,7 +6,7 @@ from unittest.mock import patch
 import io
 import sys
 
-from py_algo_study.algorithms.the_first_problem.main import calculate_area, main
+from py_algo_study.algorithms.the_first_problem.square import calculate_area, main
 
 
 class TestSquareAreaCalculator:
