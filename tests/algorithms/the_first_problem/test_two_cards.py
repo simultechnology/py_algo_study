@@ -18,7 +18,7 @@ class TestTwoCards:
         assert is_sum_possible(10, [1, 4], [6, 9]) == True
         
         # Test when only one combination works
-        assert is_sum_possible(10, [1, 5, 9], [2, 4, 6]) == True
+        assert is_sum_possible(10, [1, 5, 9], [3, 5, 9]) == True  # 1 + 9 = 10
 
     def test_is_sum_possible_false(self):
         """Test is_sum_possible when no valid combination exists."""
