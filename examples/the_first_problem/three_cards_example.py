@@ -7,8 +7,7 @@ of the Three Cards problem with examples and performance comparisons.
 import time
 from py_algo_study.algorithms.the_first_problem.three_cards import (
     count_combinations,
-    count_combinations_optimized,
-    count_combinations_mathematical
+    count_combinations_optimized
 )
 
 
