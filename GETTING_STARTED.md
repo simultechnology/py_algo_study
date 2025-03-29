@@ -1,111 +1,111 @@
-# アルゴリズム学習プロジェクト 使用ガイド
+# Algorithm Study Project Guide
 
-このガイドでは、Poetryを使用したPythonアルゴリズム学習プロジェクトの使い方を説明します。
+This guide explains how to use the Python algorithm study project with Poetry.
 
-## 1. 環境設定
+## 1. Environment Setup
 
-### Poetryのインストール
+### Installing Poetry
 
-まだPoetryをインストールしていない場合は、以下のコマンドでインストールします：
+If you haven't installed Poetry yet, install it with the following command:
 
 ```bash
-# macOS / Linux / Windowsの場合
+# macOS / Linux / Windows
 curl -sSL https://install.python-poetry.org | python3 -
 
-# または pipを使用して
+# Or using pip
 pip install poetry
 ```
 
-### プロジェクトのセットアップ
+### Project Setup
 
-プロジェクトディレクトリに移動し、依存関係をインストールします：
+Navigate to the project directory and install dependencies:
 
 ```bash
-cd /Users/t_ishikawa/workspace/python_work/algo_study
+cd /Users/t_ishikawa/workspace/python_work/py_algo_study
 poetry install
 ```
 
-これにより、`pyproject.toml`に記載されているすべての依存関係がインストールされます。
+This will install all dependencies listed in `pyproject.toml`.
 
-## 2. 仮想環境の利用
+## 2. Using the Virtual Environment
 
-Poetryは自動的に仮想環境を作成します。以下のコマンドで仮想環境を有効化できます：
+Poetry automatically creates a virtual environment. Activate it with:
 
 ```bash
 poetry shell
 ```
 
-あるいは、コマンドを実行する際に`poetry run`を付けることもできます：
+Alternatively, you can prefix commands with `poetry run`:
 
 ```bash
-poetry run python -m algo_study.algorithms.sorting.quick_sort
+poetry run python -m py_algo_study.algorithms.sorting.quick_sort
 ```
 
-## 3. アルゴリズムの実行
+## 3. Running Algorithms
 
-### 単一のアルゴリズムを実行
+### Run a Single Algorithm
 
 ```bash
-# クイックソートの例を実行
-poetry run python -m algo_study.algorithms.sorting.quick_sort
+# Run the quicksort example
+poetry run python -m py_algo_study.algorithms.sorting.quick_sort
 ```
 
-### ベンチマークの実行
+### Run Benchmarks
 
 ```bash
 poetry run python examples/sorting_benchmark.py
 ```
 
-## 4. テストの実行
+## 4. Running Tests
 
-PyTestを使ってテストを実行するには：
+To run tests with PyTest:
 
 ```bash
-# すべてのテストを実行
+# Run all tests
 poetry run pytest
 
-# 特定のテストを実行
+# Run specific tests
 poetry run pytest tests/algorithms/sorting/test_quick_sort.py
 ```
 
-## 5. 新しいアルゴリズムの追加
+## 5. Adding New Algorithms
 
-1. 適切なディレクトリに新しいPythonファイルを作成します：
+1. Create a new Python file in the appropriate directory:
    ```bash
-   touch algo_study/algorithms/search/binary_search.py
+   touch py_algo_study/algorithms/search/binary_search.py
    ```
 
-2. アルゴリズムを実装します
+2. Implement your algorithm
 
-3. テストを作成します：
+3. Create tests:
    ```bash
    mkdir -p tests/algorithms/search
    touch tests/algorithms/search/test_binary_search.py
    ```
 
-## 6. 依存関係の管理
+## 6. Managing Dependencies
 
-新しいパッケージを追加するには：
+To add new packages:
 
 ```bash
-# 本番環境の依存関係を追加
+# Add production dependencies
 poetry add numpy
 
-# 開発環境の依存関係を追加
+# Add development dependencies
 poetry add --dev black
 ```
 
-## 7. コード品質の維持
+## 7. Maintaining Code Quality
 
-コードフォーマットと品質チェックを行うには：
+For code formatting and quality checks:
 
 ```bash
-# Black でフォーマット
+# Format with Black
 poetry run black .
 
-# isort でインポートをソート
+# Sort imports with isort
 poetry run isort .
 
-# flake8 でリンティング
+# Lint with flake8
 poetry run flake8
 ```

@@ -1,3 +1,3 @@
 """
-アルゴリズム実装モジュール
+Algorithm Implementation Module
 """

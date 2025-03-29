@@ -1,3 +1,3 @@
 """
-ユーティリティ関数モジュール
+Utility Functions Module
 """

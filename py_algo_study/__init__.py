@@ -1,3 +1,3 @@
 """
-アルゴリズム学習モジュール
+Algorithm Study Module
 """

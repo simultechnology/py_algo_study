@@ -1,84 +1,84 @@
 """
-クイックソートアルゴリズムのテスト
+Tests for the Quick Sort algorithm
 """
 import pytest
 
-from algo_study.algorithms.sorting.quick_sort import quick_sort
+from py_algo_study.algorithms.sorting.quick_sort import quick_sort
 
 
 def test_quick_sort_with_integers():
-    """整数配列のソートをテスト"""
-    # 準備
+    """Test sorting an array of integers"""
+    # Arrange
     unsorted = [3, 1, 4, 1, 5, 9, 2, 6, 5]
     expected = [1, 1, 2, 3, 4, 5, 5, 6, 9]
     
-    # 実行
+    # Act
     result = quick_sort(unsorted)
     
-    # 検証
+    # Assert
     assert result == expected
 
 
 def test_quick_sort_with_strings():
-    """文字列配列のソートをテスト"""
-    # 準備
+    """Test sorting an array of strings"""
+    # Arrange
     unsorted = ["banana", "apple", "cherry", "date"]
     expected = ["apple", "banana", "cherry", "date"]
     
-    # 実行
+    # Act
     result = quick_sort(unsorted)
     
-    # 検証
+    # Assert
     assert result == expected
 
 
 def test_quick_sort_with_empty_array():
-    """空配列のソートをテスト"""
-    # 準備
+    """Test sorting an empty array"""
+    # Arrange
     unsorted = []
     expected = []
     
-    # 実行
+    # Act
     result = quick_sort(unsorted)
     
-    # 検証
+    # Assert
     assert result == expected
 
 
 def test_quick_sort_with_single_element():
-    """1要素配列のソートをテスト"""
-    # 準備
+    """Test sorting an array with a single element"""
+    # Arrange
     unsorted = [42]
     expected = [42]
     
-    # 実行
+    # Act
     result = quick_sort(unsorted)
     
-    # 検証
+    # Assert
     assert result == expected
 
 
 def test_quick_sort_with_duplicate_elements():
-    """重複要素を含む配列のソートをテスト"""
-    # 準備
+    """Test sorting an array with duplicate elements"""
+    # Arrange
     unsorted = [3, 3, 3, 2, 2, 1, 1]
     expected = [1, 1, 2, 2, 3, 3, 3]
     
-    # 実行
+    # Act
     result = quick_sort(unsorted)
     
-    # 検証
+    # Assert
     assert result == expected
 
 
 def test_quick_sort_with_negative_numbers():
-    """負の数を含む配列のソートをテスト"""
-    # 準備
+    """Test sorting an array with negative numbers"""
+    # Arrange
     unsorted = [5, -10, 0, 15, -5]
     expected = [-10, -5, 0, 5, 15]
     
-    # 実行
+    # Act
     result = quick_sort(unsorted)
     
-    # 検証
+    # Assert
     assert result == expected

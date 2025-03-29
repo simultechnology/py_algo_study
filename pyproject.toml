@@ -1,7 +1,7 @@
 [tool.poetry]
-name = "algo_study"
+name = "py_algo_study"
 version = "0.1.0"
-description = "アルゴリズム学習用プロジェクト"
+description = "Project for studying algorithms in Python"
 authors = ["Your Name <your.email@example.com>"]
 readme = "README.md"
 

@@ -1,36 +1,36 @@
-# アルゴリズム学習プロジェクト
+# Algorithm Study Project
 
-Pythonを使用したアルゴリズムとデータ構造の学習用リポジトリです。
+This repository is for learning algorithms and data structures using Python.
 
-## セットアップ方法
+## Setup
 
-1. Poetryをインストールする（まだの場合）：
+1. Install Poetry (if you haven't already):
    ```bash
    pip install poetry
    ```
 
-2. 依存関係をインストールする：
+2. Install dependencies:
    ```bash
    poetry install
    ```
 
-3. 仮想環境を有効化する：
+3. Activate the virtual environment:
    ```bash
    poetry shell
    ```
 
-## プロジェクト構造
+## Project Structure
 
-- `algo_study/`: メインのソースコードディレクトリ
-  - `data_structures/`: 様々なデータ構造の実装
-  - `algorithms/`: アルゴリズムの実装
-  - `utils/`: ユーティリティ関数
-- `tests/`: テストコード
-- `examples/`: アルゴリズムの使用例
+- `py_algo_study/`: Main source code directory
+  - `data_structures/`: Implementations of various data structures
+  - `algorithms/`: Algorithm implementations
+  - `utils/`: Utility functions
+- `tests/`: Test code
+- `examples/`: Algorithm usage examples
 
-## 実行方法
+## How to Run
 
 ```bash
-# 例：ソートアルゴリズムの実行
-poetry run python -m algo_study.algorithms.sorting.quick_sort
+# Example: Run a sorting algorithm
+poetry run python -m py_algo_study.algorithms.sorting.quick_sort
 ```

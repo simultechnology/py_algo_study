@@ -1,3 +1,3 @@
 """
-データ構造実装モジュール
+Data Structures Implementation Module
 """

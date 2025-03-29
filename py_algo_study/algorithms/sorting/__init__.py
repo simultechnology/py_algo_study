@@ -1,3 +1,3 @@
 """
-ソートアルゴリズムモジュール
+Sorting Algorithms Module
 """
